@@ -11,19 +11,15 @@
 		86A9B7B52160D4DD00A61981 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9B7B02160D4DD00A61981 /* Localizer.swift */; };
 		86A9B7B62160D4DD00A61981 /* LocalizerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9B7B22160D4DD00A61981 /* LocalizerConfig.swift */; };
 		86A9B7B72160D4DD00A61981 /* UserDefaults+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9B7B42160D4DD00A61981 /* UserDefaults+extensions.swift */; };
-		9EC74B97082380443E41FB54 /* libPods-RxLocalizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29FEAD97982541B3EF4B0C1D /* libPods-RxLocalizer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		082D1C08011ADED9A96C0771 /* Pods-RxLocalizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxLocalizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxLocalizer/Pods-RxLocalizer.release.xcconfig"; sourceTree = "<group>"; };
-		29FEAD97982541B3EF4B0C1D /* libPods-RxLocalizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RxLocalizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A9B7A52160D31400A61981 /* RxLocalizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxLocalizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A9B7A82160D31400A61981 /* RxLocalizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxLocalizer.h; sourceTree = "<group>"; };
 		86A9B7A92160D31400A61981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86A9B7B02160D4DD00A61981 /* Localizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
 		86A9B7B22160D4DD00A61981 /* LocalizerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizerConfig.swift; sourceTree = "<group>"; };
 		86A9B7B42160D4DD00A61981 /* UserDefaults+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+extensions.swift"; sourceTree = "<group>"; };
-		AF0FED4C08E0FF3BB4E4ABCC /* Pods-RxLocalizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxLocalizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxLocalizer/Pods-RxLocalizer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,37 +27,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EC74B97082380443E41FB54 /* libPods-RxLocalizer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A430E68BFA64CB06C7E4A16 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				29FEAD97982541B3EF4B0C1D /* libPods-RxLocalizer.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		47B0BC4E74BD924E48282635 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AF0FED4C08E0FF3BB4E4ABCC /* Pods-RxLocalizer.debug.xcconfig */,
-				082D1C08011ADED9A96C0771 /* Pods-RxLocalizer.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		86A9B79B2160D31400A61981 = {
 			isa = PBXGroup;
 			children = (
 				86A9B7A72160D31400A61981 /* RxLocalizer */,
 				86A9B7A62160D31400A61981 /* Products */,
-				47B0BC4E74BD924E48282635 /* Pods */,
-				3A430E68BFA64CB06C7E4A16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,29 +52,29 @@
 		86A9B7A72160D31400A61981 /* RxLocalizer */ = {
 			isa = PBXGroup;
 			children = (
-				86A9B7B32160D4DD00A61981 /* Extensions */,
-				86A9B7B12160D4DD00A61981 /* Models */,
-				86A9B7B02160D4DD00A61981 /* Localizer.swift */,
-				86A9B7A82160D31400A61981 /* RxLocalizer.h */,
-				86A9B7A92160D31400A61981 /* Info.plist */,
+				86D5FEFB21615F82007DC0DD /* Supporting Files */,
+				86D5FEFA21615EB4007DC0DD /* Source */,
 			);
 			path = RxLocalizer;
 			sourceTree = "<group>";
 		};
-		86A9B7B12160D4DD00A61981 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				86A9B7B22160D4DD00A61981 /* LocalizerConfig.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		86A9B7B32160D4DD00A61981 /* Extensions */ = {
+		86D5FEFA21615EB4007DC0DD /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				86A9B7B42160D4DD00A61981 /* UserDefaults+extensions.swift */,
+				86A9B7B22160D4DD00A61981 /* LocalizerConfig.swift */,
+				86A9B7B02160D4DD00A61981 /* Localizer.swift */,
 			);
-			path = Extensions;
+			path = Source;
+			sourceTree = "<group>";
+		};
+		86D5FEFB21615F82007DC0DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86A9B7A82160D31400A61981 /* RxLocalizer.h */,
+				86A9B7A92160D31400A61981 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +95,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86A9B7AD2160D31400A61981 /* Build configuration list for PBXNativeTarget "RxLocalizer" */;
 			buildPhases = (
-				AC45EECFD7C6B22A6DB472D5 /* [CP] Check Pods Manifest.lock */,
 				86A9B7A02160D31400A61981 /* Headers */,
 				86A9B7A12160D31400A61981 /* Sources */,
 				86A9B7A22160D31400A61981 /* Frameworks */,
@@ -175,31 +150,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		AC45EECFD7C6B22A6DB472D5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RxLocalizer-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		86A9B7A12160D31400A61981 /* Sources */ = {
@@ -339,7 +289,6 @@
 		};
 		86A9B7AE2160D31400A61981 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF0FED4C08E0FF3BB4E4ABCC /* Pods-RxLocalizer.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -349,7 +298,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RxLocalizer/Info.plist;
+				INFOPLIST_FILE = "RxLocalizer/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -367,7 +316,6 @@
 		};
 		86A9B7AF2160D31400A61981 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 082D1C08011ADED9A96C0771 /* Pods-RxLocalizer.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -377,7 +325,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RxLocalizer/Info.plist;
+				INFOPLIST_FILE = "RxLocalizer/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

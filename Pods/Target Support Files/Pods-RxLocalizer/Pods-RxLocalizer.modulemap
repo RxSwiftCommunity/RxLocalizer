@@ -1,6 +1,0 @@
-module Pods_RxLocalizer {
-  umbrella header "Pods-RxLocalizer-umbrella.h"
-
-  export *
-  module * { export * }
-}
