@@ -12,7 +12,7 @@ s.homepage = "https://github.com/khambir/RxLocalizer"
 s.source = { :git => "https://github.com/khambir/RxLocalizer.git", :tag => "#{s.version}" }
 s.dependency 'RxSwift', '~> 4.3.1'
 s.dependency 'RxCocoa', '~> 4.3.1'
-s.source_files = 'Source/*.swift'
+s.source_files = 'RxLocalizer/Source/*.swift'
 s.swift_version = "4.2"
 
 end
