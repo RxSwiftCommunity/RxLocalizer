@@ -18,7 +18,7 @@ pod 'RxLocalizer'
 
 ## Usage
 
-Before all:
+### Before all:
 
 ```swift
 import RxLocalizer
