@@ -6,7 +6,7 @@ RxLocalizer is a framework written in swift which allows you to localize your ap
 
 - Xcode 10
 - Swift 4.2
-- iOS 10
+- iOS 10+
 
 ## Installation
 
