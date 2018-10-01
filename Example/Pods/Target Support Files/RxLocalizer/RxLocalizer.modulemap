@@ -1,0 +1,6 @@
+framework module RxLocalizer {
+  umbrella header "RxLocalizer-umbrella.h"
+
+  export *
+  module * { export * }
+}

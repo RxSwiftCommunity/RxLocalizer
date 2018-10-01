@@ -20,10 +20,18 @@
 		86A9B7B02160D4DD00A61981 /* Localizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
 		86A9B7B22160D4DD00A61981 /* LocalizerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizerConfig.swift; sourceTree = "<group>"; };
 		86A9B7B42160D4DD00A61981 /* UserDefaults+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+extensions.swift"; sourceTree = "<group>"; };
+		86D5FF02216168ED007DC0DD /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		86A9B7A22160D31400A61981 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D5FEFF216168ED007DC0DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				86A9B7A52160D31400A61981 /* RxLocalizer.framework */,
+				86D5FF02216168ED007DC0DD /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,18 +118,39 @@
 			productReference = 86A9B7A52160D31400A61981 /* RxLocalizer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		86D5FF01216168ED007DC0DD /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86D5FF13216168F0007DC0DD /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				86D5FEFE216168ED007DC0DD /* Sources */,
+				86D5FEFF216168ED007DC0DD /* Frameworks */,
+				86D5FF00216168ED007DC0DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Example;
+			productName = Example;
+			productReference = 86D5FF02216168ED007DC0DD /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		86A9B79C2160D31400A61981 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = MLSDev;
 				TargetAttributes = {
 					86A9B7A42160D31400A61981 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
+					};
+					86D5FF01216168ED007DC0DD = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
@@ -130,6 +160,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 86A9B79B2160D31400A61981;
 			productRefGroup = 86A9B7A62160D31400A61981 /* Products */;
@@ -137,12 +168,20 @@
 			projectRoot = "";
 			targets = (
 				86A9B7A42160D31400A61981 /* RxLocalizer */,
+				86D5FF01216168ED007DC0DD /* Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		86A9B7A32160D31400A61981 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D5FF00216168ED007DC0DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -159,6 +198,13 @@
 				86A9B7B52160D4DD00A61981 /* Localizer.swift in Sources */,
 				86A9B7B72160D4DD00A61981 /* UserDefaults+extensions.swift in Sources */,
 				86A9B7B62160D4DD00A61981 /* LocalizerConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D5FEFE216168ED007DC0DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +388,42 @@
 			};
 			name = Release;
 		};
+		86D5FF11216168F0007DC0DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7K79Y659W;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vladkhambir.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86D5FF12216168F0007DC0DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7K79Y659W;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vladkhambir.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -359,6 +441,15 @@
 			buildConfigurations = (
 				86A9B7AE2160D31400A61981 /* Debug */,
 				86A9B7AF2160D31400A61981 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86D5FF13216168F0007DC0DD /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86D5FF11216168F0007DC0DD /* Debug */,
+				86D5FF12216168F0007DC0DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
