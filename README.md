@@ -2,8 +2,6 @@
 
 RxLocalizer is a framework written in swift which allows you to localize your apps, using RxSwift.
 
-![RxLocalizer demo](demo.gif =160x247.5)
-
 ## Requirements
 
 - Xcode 10
