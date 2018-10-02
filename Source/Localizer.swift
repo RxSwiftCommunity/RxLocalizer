@@ -45,7 +45,7 @@ public class Localizer: LocalizerType, ReactiveCompatible {
     
     public func localized(_ string: String) -> Driver<String> {
         return currentLanguageCode.asDriver().map { [weak self] _ in
-            guard let self = self else { return "" }
+            guard let self = self else { return "Localizer error" }
             return self.localizationBundle.localizedString(forKey: string, value: "Unlocalized String", table: self._configuration.value.tableName)
         }
     }
@@ -53,7 +53,7 @@ public class Localizer: LocalizerType, ReactiveCompatible {
     private init() {
         localizationBundle = _configuration.value.bundle
         currentLanguageCode = _currentLanguage.asDriver(onErrorJustReturn: nil)
-        changeLanguage.asDriver(onErrorJustReturn: nil).drive(onNext: { [weak self] in
+        changeLanguage.distinctUntilChanged().asDriver(onErrorJustReturn: nil).drive(onNext: { [weak self] in
             self?._configuration.value.defaults.currentLanguage = $0
             if let localizationBundle = self?._configuration.value.bundle.path(forResource: $0, ofType: "lproj").flatMap(Bundle.init) {
                 self?.localizationBundle = localizationBundle
@@ -66,7 +66,7 @@ public class Localizer: LocalizerType, ReactiveCompatible {
             changeLanguage.accept(currentLanguage)
         } else {
             let preferredLocalization = _configuration.value.bundle.preferredLocalizations.filter { $0.count < 3 }.first
-            changeLanguage.accept(preferredLocalization ?? "")
+            changeLanguage.accept(preferredLocalization ?? Locale.current.languageCode ?? "")
         }
         changeConfiguration.bind(to: _configuration).disposed(by: disposeBag)
     }

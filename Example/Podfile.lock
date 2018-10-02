@@ -7,19 +7,24 @@ PODS:
   - RxSwift (4.3.1)
 
 DEPENDENCIES:
-  - RxLocalizer
+  - RxCocoa
+  - RxLocalizer (from `../`)
+  - RxSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - RxCocoa
-    - RxLocalizer
     - RxSwift
+
+EXTERNAL SOURCES:
+  RxLocalizer:
+    :path: "../"
 
 SPEC CHECKSUMS:
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
-  RxLocalizer: aabc7d20be69bf1cbaad07c4d24dbec9f27edb2a
+  RxLocalizer: 1377fee034f1318a9a188c2fc72e275562360862
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
 
-PODFILE CHECKSUM: 2ac92c3c4c2b37d0979ac518d0553e1e2393aaf1
+PODFILE CHECKSUM: 0d7f71cbb988b985a9e6d50ab9ff283b16fd8d8a
 
 COCOAPODS: 1.5.3
