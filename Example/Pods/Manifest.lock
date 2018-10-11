@@ -1,7 +1,7 @@
 PODS:
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
-  - RxLocalizer (1.0.0):
+  - RxLocalizer (1.0.1):
     - RxCocoa (~> 4.3.1)
     - RxSwift (~> 4.3.1)
   - RxSwift (4.3.1)
@@ -22,7 +22,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
-  RxLocalizer: 1377fee034f1318a9a188c2fc72e275562360862
+  RxLocalizer: edf2cdd93980e8e5508e446cb546f35a2a04f107
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
 
 PODFILE CHECKSUM: 0d7f71cbb988b985a9e6d50ab9ff283b16fd8d8a

@@ -2,8 +2,8 @@
 //  LocalizerConfig.swift
 //  Localizer
 //
-//  Created by Vladislav on 9/29/18.
-//  Copyright © 2018 MLSDev. All rights reserved.
+//  Created by Vladislav Khambir on 9/29/18.
+//  Copyright (c) RxSwiftCommunity
 //
 
 public struct LocalizerConfig {

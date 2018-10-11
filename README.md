@@ -56,3 +56,7 @@ let localizerConfig = LocalizerConfig(defaults: .standard, bundle: .main, tableN
 Localizer.shared.changeConfiguration.accept(localizerConfig)
 ```
 
+## License
+
+RxLocalizer is available under the MIT license. See the LICENSE file for more info.
+Copyright (c) RxSwiftCommunity
