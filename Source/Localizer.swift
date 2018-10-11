@@ -29,7 +29,7 @@ public protocol LocalizerType {
     func localized(_ string: String) -> Driver<String>
 }
 
-public class Localizer: LocalizerType, ReactiveCompatible {
+public class Localizer: LocalizerType {
     public static let shared: LocalizerType = Localizer()
     
     public let changeLanguage = PublishRelay<String?>()
@@ -37,37 +37,30 @@ public class Localizer: LocalizerType, ReactiveCompatible {
     public let currentLanguageCode: Driver<String?>
     public private(set) var currentLanguageCodeValue: String?
     
-    private var localizationBundle: Bundle
-    
-    private let _configuration = BehaviorRelay<LocalizerConfig>(value: LocalizerConfig())
-    private let _currentLanguage = BehaviorRelay<String?>(value: nil)
+    private let localizationBundle = BehaviorRelay<Bundle>(value: .main)
+    private let configuration = BehaviorRelay<LocalizerConfig>(value: LocalizerConfig())
     private let disposeBag = DisposeBag()
     
     public func localized(_ string: String) -> Driver<String> {
-        return currentLanguageCode.asDriver().map { [weak self] _ in
-            guard let self = self else { return "Localizer error" }
-            return self.localizationBundle.localizedString(forKey: string, value: "Unlocalized String", table: self._configuration.value.tableName)
-        }
+        return Driver.combineLatest(currentLanguageCode.asDriver(), configuration.asDriver()).map { $1.tableName }
+            .withLatestFrom(localizationBundle.asDriver()) { $1.localizedString(forKey: string, value: "Unlocalized String", table: $0) }
     }
     
     private init() {
-        localizationBundle = _configuration.value.bundle
-        currentLanguageCode = _currentLanguage.asDriver(onErrorJustReturn: nil)
-        changeLanguage.distinctUntilChanged().asDriver(onErrorJustReturn: nil).drive(onNext: { [weak self] in
-            self?._configuration.value.defaults.currentLanguage = $0
-            if let localizationBundle = self?._configuration.value.bundle.path(forResource: $0, ofType: "lproj").flatMap(Bundle.init) {
-                self?.localizationBundle = localizationBundle
+        currentLanguageCode = changeLanguage.distinctUntilChanged().asDriver(onErrorJustReturn: nil)
+            .withLatestFrom(configuration.asDriver()) { [localizationBundle] languageCode, configuration in
+                configuration.defaults.currentLanguage = languageCode
+                localizationBundle.accept(configuration.bundle.path(forResource: languageCode, ofType: "lproj").flatMap(Bundle.init) ?? localizationBundle.value)
+                return languageCode
             }
-            self?._currentLanguage.accept($0)
-        }).disposed(by: disposeBag)
         
         currentLanguageCode.drive(onNext: { [weak self] in self?.currentLanguageCodeValue = $0 }).disposed(by: disposeBag)
-        if let currentLanguage = _configuration.value.defaults.currentLanguage {
+        if let currentLanguage = configuration.value.defaults.currentLanguage {
             changeLanguage.accept(currentLanguage)
         } else {
-            let preferredLocalization = _configuration.value.bundle.preferredLocalizations.filter { $0.count < 3 }.first
-            changeLanguage.accept(preferredLocalization ?? Locale.current.languageCode ?? "")
+            let preferredLocalization = configuration.value.bundle.preferredLocalizations.filter { $0.count < 3 }.first
+            changeLanguage.accept(preferredLocalization ?? Locale.current.languageCode ?? "en")
         }
-        changeConfiguration.bind(to: _configuration).disposed(by: disposeBag)
+        changeConfiguration.bind(to: configuration).disposed(by: disposeBag)
     }
 }
