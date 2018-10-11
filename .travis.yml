@@ -1,0 +1,9 @@
+osx_image: xcode10
+language: swift
+
+install: true
+
+env:
+  - BUILD="gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet; pod repo update && pod lib lint RxLocalizer.podspec --verbose"
+
+script: eval "${BUILD}"
