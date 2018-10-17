@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var italianButton: UIButton!
     
     let localizer = Localizer.shared
-    let disposeBug = DisposeBag()
+    let disposeBag = DisposeBag()
     let viewModel: ViewModelType = ViewModel(localizer: Localizer.shared)
     
     override func viewDidLoad() {
@@ -27,8 +27,8 @@ class ViewController: UIViewController {
             urkaineButton.rx.tap.map { Language.ukrainian.rawValue },
             englishButton.rx.tap.map { Language.english.rawValue },
             italianButton.rx.tap.map { Language.italian.rawValue }
-        ).bind(to: viewModel.changeLanguageTrigger).disposed(by: disposeBug)
+        ).bind(to: viewModel.changeLanguageTrigger).disposed(by: disposeBag)
         
-        viewModel.localizedText.drive(localizedLabel.rx.text).disposed(by: disposeBug)
+        viewModel.localizedText.drive(localizedLabel.rx.text).disposed(by: disposeBag)
     }
 }
