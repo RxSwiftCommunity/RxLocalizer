@@ -42,23 +42,24 @@ public class Localizer: LocalizerType {
     private let disposeBag = DisposeBag()
     
     public func localized(_ string: String) -> Driver<String> {
-        return Driver.combineLatest(currentLanguageCode.asDriver(), configuration.asDriver()).map { $1.tableName }
-            .withLatestFrom(localizationBundle.asDriver()) { $1.localizedString(forKey: string, value: "Unlocalized String", table: $0) }
+        return localizationBundle.asDriver().withLatestFrom(configuration.asDriver()) {
+            $0.localizedString(forKey: string, value: "Unlocalized String", table: $1.tableName)
+        }
     }
     
     private init() {
-        currentLanguageCode = changeLanguage.distinctUntilChanged().asDriver(onErrorJustReturn: nil)
-            .withLatestFrom(configuration.asDriver()) { [localizationBundle] languageCode, configuration in
-                configuration.defaults.currentLanguage = languageCode
-                localizationBundle.accept(configuration.bundle.path(forResource: languageCode, ofType: "lproj").flatMap(Bundle.init) ?? localizationBundle.value)
-                return languageCode
-            }
+        currentLanguageCode = .combineLatest(changeLanguage.distinctUntilChanged().asDriver(onErrorJustReturn: nil),
+                                             configuration.asDriver()) { [localizationBundle] languageCode, configuration in
+            configuration.defaults.currentLanguage = languageCode
+            localizationBundle.accept(configuration.bundle.path(forResource: languageCode, ofType: "lproj").flatMap(Bundle.init) ?? localizationBundle.value)
+            return languageCode
+        }
         
         currentLanguageCode.drive(onNext: { [weak self] in self?.currentLanguageCodeValue = $0 }).disposed(by: disposeBag)
         if let currentLanguage = configuration.value.defaults.currentLanguage {
             changeLanguage.accept(currentLanguage)
         } else {
-            let preferredLocalization = configuration.value.bundle.preferredLocalizations.filter { $0.count < 3 }.first
+            let preferredLocalization = configuration.value.bundle.preferredLocalizations.first { $0.count < 3 }
             changeLanguage.accept(preferredLocalization ?? Locale.current.languageCode ?? "en")
         }
         changeConfiguration.bind(to: configuration).disposed(by: disposeBag)

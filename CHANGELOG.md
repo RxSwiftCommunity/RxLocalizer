@@ -1,5 +1,10 @@
 # Change Log
 
+### 1.0.3
+
+Fix bug: changing config does not trigger updating localization
+
+
 ### 1.0.2
 
 Fix bug: changing config does not trigger updating localization
