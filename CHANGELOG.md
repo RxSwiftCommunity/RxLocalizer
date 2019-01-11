@@ -1,5 +1,13 @@
 # Change Log
 
+### 1.0.4
+
+Added an ability to localize strings synchronously
+```swift
+fooLabel.text = Localizer.shared.localized("foo")
+```
+
+
 ### 1.0.3
 
 Fix bug: changing config does not trigger updating localization

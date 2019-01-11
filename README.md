@@ -40,6 +40,12 @@ Localizer.shared.localized("Start")
   .disposed(by: disposeBag)
 ```
 
+### Synchronously localized strings
+
+```swift
+startLabel.text = Localizer.shared.localized("Start")
+```
+
 ### Change language
 
 You are able to set language by language code. 

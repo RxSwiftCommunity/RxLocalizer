@@ -22,11 +22,17 @@ public protocol LocalizerType {
     /// Trigger which is used for changing localizer configuration.
     var changeConfiguration: PublishRelay<LocalizerConfig> { get }
     
-    /// Localizes the string
+    /// Localizes the string, using Rx
     ///
     /// - Parameter string: String which will be localized
     /// - Returns: Localized string
     func localized(_ string: String) -> Driver<String>
+    
+    /// Localizes the string synchronously
+    ///
+    /// - Parameter string: String which will be localized
+    /// - Returns: Localized string
+    func localized(_ string: String) -> String
 }
 
 public class Localizer: LocalizerType {
@@ -45,6 +51,10 @@ public class Localizer: LocalizerType {
         return localizationBundle.asDriver().withLatestFrom(configuration.asDriver()) {
             $0.localizedString(forKey: string, value: "Unlocalized String", table: $1.tableName)
         }
+    }
+    
+    public func localized(_ string: String) -> String {
+        return localizationBundle.value.localizedString(forKey: string, value: "Unlocalized String", table: configuration.value.tableName)
     }
     
     private init() {
