@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/RxSwiftCommunity/RxLocalizer.svg?branch=master)](https://travis-ci.org/RxSwiftCommunity/RxLocalizer)
 [![Swift](https://img.shields.io/badge/swift-4.2-orange.svg)](https://github.com/RxSwiftCommunity/RxLocalizer)
-[![RxSwift](https://img.shields.io/badge/RxSwift-4.3.1-red.svg)](https://github.com/ReactiveX/RxSwift)
+[![RxSwift](https://img.shields.io/badge/RxSwift-4.4.0-red.svg)](https://github.com/ReactiveX/RxSwift)
 [![Platform](https://img.shields.io/badge/iOS-10+-blue.svg)](https://github.com/RxSwiftCommunity/RxLocalizer/blob/master/LICENSE)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/RxSwiftCommunity/RxLocalizer/blob/master/LICENSE)
 

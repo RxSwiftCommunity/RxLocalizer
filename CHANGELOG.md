@@ -1,5 +1,10 @@
 # Change Log
 
+### 1.1.0
+
+Updated `RxSwift` & `RxCocoa` to 4.4.0
+
+
 ### 1.0.4
 
 Added an ability to localize strings synchronously
