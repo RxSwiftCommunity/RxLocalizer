@@ -1,5 +1,11 @@
 # Change Log
 
+### 1.2.0
+
+Updated to Swift 5
+Updated `RxSwift` & `RxCocoa` to 4.4.2
+
+
 ### 1.1.0
 
 Updated `RxSwift` & `RxCocoa` to 4.4.0
