@@ -7,3 +7,4 @@
 */
 
 "testString" = "Funziona e basta";
+"testString2" = "Funziona solo %@%@ volte";

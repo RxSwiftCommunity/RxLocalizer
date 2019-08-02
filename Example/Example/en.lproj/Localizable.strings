@@ -7,3 +7,4 @@
 */
 
 "testString" = "It just works";
+"testString2" = "It just works %@%@ times!";
