@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,10 +41,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1K-hj-C2O">
+                                <rect key="frame" x="8" y="440" width="359" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tv8-nV-Y58" secondAttribute="trailing" constant="8" id="4oL-Ha-KaL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V1K-hj-C2O" secondAttribute="trailing" constant="8" id="Cug-SA-wAv"/>
+                            <constraint firstItem="V1K-hj-C2O" firstAttribute="top" secondItem="Tv8-nV-Y58" secondAttribute="bottom" constant="15" id="NtC-ri-5pn"/>
+                            <constraint firstItem="V1K-hj-C2O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="gKW-jp-rlI"/>
                             <constraint firstItem="wJq-4o-2E6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jbe-r6-HQH"/>
                             <constraint firstItem="wJq-4o-2E6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wDe-e4-HyF"/>
                             <constraint firstItem="Tv8-nV-Y58" firstAttribute="top" secondItem="wJq-4o-2E6" secondAttribute="bottom" constant="16" id="wMV-XK-2gA"/>
@@ -55,6 +65,7 @@
                         <outlet property="englishButton" destination="bbw-Bx-RaN" id="c5p-eJ-jva"/>
                         <outlet property="italianButton" destination="AWT-5z-rs1" id="YC1-Oz-XYK"/>
                         <outlet property="localizedLabel" destination="Tv8-nV-Y58" id="7Mo-wY-aJb"/>
+                        <outlet property="localizedLabel2" destination="V1K-hj-C2O" id="UaE-gQ-UBH"/>
                         <outlet property="urkaineButton" destination="sCn-6f-fhn" id="MkI-KZ-0Hr"/>
                     </connections>
                 </viewController>

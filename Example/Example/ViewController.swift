@@ -12,6 +12,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var localizedLabel: UILabel!
+    @IBOutlet weak var localizedLabel2: UILabel!
     @IBOutlet weak var urkaineButton: UIButton!
     @IBOutlet weak var englishButton: UIButton!
     @IBOutlet weak var italianButton: UIButton!
@@ -30,5 +31,6 @@ class ViewController: UIViewController {
         ).bind(to: viewModel.changeLanguageTrigger).disposed(by: disposeBag)
         
         viewModel.localizedText.drive(localizedLabel.rx.text).disposed(by: disposeBag)
+        viewModel.localizedText2.drive(localizedLabel2.rx.text).disposed(by: disposeBag)
     }
 }
