@@ -50,8 +50,15 @@ startLabel.text = Localizer.shared.localized("Start")
 
 You are able to set language by language code. 
 A full list of the codes you can check [here](https://www.ibabbleon.com/iOS-Language-Codes-ISO-639.html).
+
 ```swift
 Localizer.shared.changeLanguage.accept("en")
+```
+
+Or change the current language code to a known one:
+
+```swift
+localizer.changeLanguageCode(to: .ja)
 ```
 
 ### Change RxLocalizer configuration
