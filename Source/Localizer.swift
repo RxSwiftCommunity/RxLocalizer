@@ -47,7 +47,13 @@ public protocol LocalizerType {
     /// - Parameter arguments: String argments which will be interpolated inside localized string
     /// - Returns: Localized string
     func localized(_ string: String, arguments: CVarArg...) -> String
+}
 
+extension LocalizerType {
+    
+    public func changeLanguageCode(to new: KnownLanguageCode) {
+        self.changeLanguage.accept(new.rawValue)
+    }
 }
 
 public class Localizer: LocalizerType {

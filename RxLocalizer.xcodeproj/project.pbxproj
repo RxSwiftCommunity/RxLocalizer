@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62A1B64322FA90DD0020FFC9 /* KnownLanguageCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1B64222FA90DD0020FFC9 /* KnownLanguageCode.swift */; };
 		86A9B7AA2160D31400A61981 /* RxLocalizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 86A9B7A82160D31400A61981 /* RxLocalizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86A9B7B52160D4DD00A61981 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9B7B02160D4DD00A61981 /* Localizer.swift */; };
 		86A9B7B62160D4DD00A61981 /* LocalizerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9B7B22160D4DD00A61981 /* LocalizerConfig.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62A1B64222FA90DD0020FFC9 /* KnownLanguageCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnownLanguageCode.swift; sourceTree = "<group>"; };
 		862F087F2162BBA7000C89E9 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		862F08812162BBD1000C89E9 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		862F08832162BBD8000C89E9 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 				86A9B7B42160D4DD00A61981 /* UserDefaults+extensions.swift */,
 				86A9B7B22160D4DD00A61981 /* LocalizerConfig.swift */,
 				86A9B7B02160D4DD00A61981 /* Localizer.swift */,
+				62A1B64222FA90DD0020FFC9 /* KnownLanguageCode.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62A1B64322FA90DD0020FFC9 /* KnownLanguageCode.swift in Sources */,
 				86A9B7B52160D4DD00A61981 /* Localizer.swift in Sources */,
 				86A9B7B72160D4DD00A61981 /* UserDefaults+extensions.swift in Sources */,
 				86A9B7B62160D4DD00A61981 /* LocalizerConfig.swift in Sources */,
