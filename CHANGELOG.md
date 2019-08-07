@@ -1,5 +1,9 @@
 # Change Log
 
+### Upcoming
+
+- Add `enum KnownLanguageCode`
+
 ### 1.3.0
 
 Updated `RxSwift` & `RxCocoa` to version 5.0
