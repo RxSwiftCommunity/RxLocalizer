@@ -1,5 +1,10 @@
 # Change Log
 
+### 1.4.0
+
+Added supporting string interpolation
+
+
 ### 1.3.0
 
 Updated `RxSwift` & `RxCocoa` to version 5.0
