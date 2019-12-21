@@ -6,6 +6,7 @@
 //  Copyright (c) RxSwiftCommunity
 //
 
+import Foundation
 import RxSwift
 import RxCocoa  
 

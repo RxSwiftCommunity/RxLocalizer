@@ -19,6 +19,7 @@
 		862F087F2162BBA7000C89E9 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		862F08812162BBD1000C89E9 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		862F08832162BBD8000C89E9 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		863094E323AE616700EB1929 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		86A9B7A52160D31400A61981 /* RxLocalizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxLocalizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A9B7A82160D31400A61981 /* RxLocalizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxLocalizer.h; sourceTree = "<group>"; };
 		86A9B7A92160D31400A61981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		86A9B79B2160D31400A61981 = {
 			isa = PBXGroup;
 			children = (
+				863094E323AE616700EB1929 /* Package.swift */,
 				86F1BD442163AC1900606E11 /* README.md */,
 				86F1BD462163AC3B00606E11 /* CHANGELOG.md */,
 				86D5FEFB21615F82007DC0DD /* Supporting Files */,

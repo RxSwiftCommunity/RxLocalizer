@@ -18,6 +18,10 @@ RxLocalizer is a framework written in swift which allows you to localize your ap
 
 ## Installation
 
+### Swift Package Manager (requires Xcode 11)
+
+Add package into Project settings -> Swift Packages
+
 ### CocoaPods
 
 ```ruby
