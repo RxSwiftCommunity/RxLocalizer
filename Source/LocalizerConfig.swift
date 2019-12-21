@@ -6,6 +6,8 @@
 //  Copyright (c) RxSwiftCommunity
 //
 
+import Foundation
+
 public struct LocalizerConfig {
     let defaults: UserDefaults
     let tableName: String

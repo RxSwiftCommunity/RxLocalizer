@@ -6,6 +6,8 @@
 //  Copyright (c) RxSwiftCommunity
 //
 
+import Foundation
+
 extension UserDefaults {
     var currentLanguage: String? {
         get { return string(forKey: #function) }
