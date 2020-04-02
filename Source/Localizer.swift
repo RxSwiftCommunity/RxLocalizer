@@ -64,23 +64,23 @@ public class Localizer: LocalizerType {
     private let disposeBag = DisposeBag()
     
     public func localized(_ string: String) -> Driver<String> {
-        return localizationBundle.asDriver().withLatestFrom(configuration.asDriver()) {
+        localizationBundle.asDriver().withLatestFrom(configuration.asDriver()) {
             $0.localizedString(forKey: string, value: "Unlocalized String", table: $1.tableName)
         }
     }
     
     public func localized(_ string: String, arguments: CVarArg...) -> Driver<String> {
-        return localizationBundle.asDriver().withLatestFrom(configuration.asDriver()) {
+        localizationBundle.asDriver().withLatestFrom(configuration.asDriver()) {
             String(format: $0.localizedString(forKey: string, value: "Unlocalized String", table: $1.tableName), arguments: arguments)
         }
     }
     
     public func localized(_ string: String) -> String {
-        return localizationBundle.value.localizedString(forKey: string, value: "Unlocalized String", table: configuration.value.tableName)
+        localizationBundle.value.localizedString(forKey: string, value: "Unlocalized String", table: configuration.value.tableName)
     }
     
     public func localized(_ string: String, arguments: CVarArg...) -> String {
-        return String(format: localizationBundle.value.localizedString(forKey: string, value: "Unlocalized String", table: configuration.value.tableName), arguments: arguments)
+        String(format: localizationBundle.value.localizedString(forKey: string, value: "Unlocalized String", table: configuration.value.tableName), arguments: arguments)
     }
     
     private init() {

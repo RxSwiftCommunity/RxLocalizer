@@ -1,5 +1,10 @@
 # Change Log
 
+### 1.5.0
+
+Updated to Swift 5.2,  Xcode 11.4,  `RxSwift` & `RxCocoa` to 5.1.1
+
+
 ### 1.4.0
 
 Added supporting string interpolation

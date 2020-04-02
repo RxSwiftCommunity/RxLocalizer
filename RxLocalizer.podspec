@@ -5,14 +5,14 @@ s.ios.deployment_target = '10.0'
 s.name = "RxLocalizer"
 s.summary = "RxLocalizer allows you to localize your app with RxSwift."
 s.requires_arc = true
-s.version = "1.4.0"
+s.version = "1.5.0"
 s.license = { :type => "MIT", :file => "LICENSE" }
 s.author = { "Vladislav Khambir" => "vlad.khambir@gmail.com" }
 s.homepage = "https://github.com/RxSwiftCommunity/RxLocalizer"
 s.source = { :git => "https://github.com/RxSwiftCommunity/RxLocalizer.git", :tag => "#{s.version}" }
-s.dependency 'RxSwift', '~> 5.0'
-s.dependency 'RxCocoa', '~> 5.0'
+s.dependency 'RxSwift', '~> 5.1.1'
+s.dependency 'RxCocoa', '~> 5.1.1'
 s.source_files = 'Source/*.swift'
-s.swift_version = "5.0"
+s.swift_version = "5.2"
 
 end

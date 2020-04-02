@@ -10,7 +10,7 @@ import Foundation
 
 extension UserDefaults {
     var currentLanguage: String? {
-        get { return string(forKey: #function) }
+        get { string(forKey: #function) }
         set { set(newValue, forKey: #function) }
     }
 }
