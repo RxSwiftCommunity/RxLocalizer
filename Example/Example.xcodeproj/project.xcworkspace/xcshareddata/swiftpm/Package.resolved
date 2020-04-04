@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "RxLocalizer",
+        "repositoryURL": "/Users/vladislav/Developer/RxSwiftCommunity/RxLocalizer",
+        "state": {
+          "branch": "master",
+          "revision": "8af586cfd4425598920f04a5b48e27627e8da398",
+          "version": null
+        }
+      },
+      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
         "state": {
