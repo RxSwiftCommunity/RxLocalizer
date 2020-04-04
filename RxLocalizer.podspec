@@ -13,6 +13,6 @@ s.source = { :git => "https://github.com/RxSwiftCommunity/RxLocalizer.git", :tag
 s.dependency 'RxSwift', '~> 5.1.1'
 s.dependency 'RxCocoa', '~> 5.1.1'
 s.source_files = 'Source/*.swift'
-s.swift_version = "5.2"
+s.swift_version = "5.0.0"
 
 end
