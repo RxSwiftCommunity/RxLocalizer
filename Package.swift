@@ -13,7 +13,7 @@ let package = Package(
     name: "RxLocalizer",
     
     platforms: [
-        .iOS(.v10),
+        .iOS(.v12),
         .tvOS(.v10),
         .macOS(.v10_12),
         .watchOS(.v3)
@@ -22,7 +22,7 @@ let package = Package(
         .library(name: "RxLocalizer", targets: ["RxLocalizer"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.1.1"))
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.1.0"))
     ],
     targets: [
          .target(

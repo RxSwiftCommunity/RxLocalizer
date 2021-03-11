@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F7EC35F25FA9E4800B1E2F7 /* RxLocalizer in Frameworks */ = {isa = PBXBuildFile; productRef = 7F7EC35E25FA9E4800B1E2F7 /* RxLocalizer */; };
 		862F06CB2162AFA1000C89E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 862F06CD2162AFA1000C89E9 /* Localizable.strings */; };
 		862F06D12162B00C000C89E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 862F06CF2162B00C000C89E9 /* LaunchScreen.storyboard */; };
-		865EEAD62438AF3A00F4BEC3 /* RxLocalizer in Frameworks */ = {isa = PBXBuildFile; productRef = 865EEAD52438AF3A00F4BEC3 /* RxLocalizer */; };
 		86D5FF2121616A4A007DC0DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D5FF2021616A4A007DC0DD /* AppDelegate.swift */; };
 		86D5FF2321616A4A007DC0DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D5FF2221616A4A007DC0DD /* ViewController.swift */; };
 		86D5FF2621616A4A007DC0DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D5FF2421616A4A007DC0DD /* Main.storyboard */; };
@@ -38,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				865EEAD62438AF3A00F4BEC3 /* RxLocalizer in Frameworks */,
+				7F7EC35F25FA9E4800B1E2F7 /* RxLocalizer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				865EEAD52438AF3A00F4BEC3 /* RxLocalizer */,
+				7F7EC35E25FA9E4800B1E2F7 /* RxLocalizer */,
 			);
 			productName = Example;
 			productReference = 86D5FF1D21616A4A007DC0DD /* Example.app */;
@@ -107,7 +107,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = MLSDev;
 				TargetAttributes = {
 					86D5FF1C21616A4A007DC0DD = {
@@ -128,7 +128,7 @@
 			);
 			mainGroup = 86D5FF1421616A4A007DC0DD;
 			packageReferences = (
-				865EEAD42438AF3A00F4BEC3 /* XCRemoteSwiftPackageReference "RxLocalizer" */,
+				7F7EC35D25FA9E4800B1E2F7 /* XCRemoteSwiftPackageReference "RxLocalizer" */,
 			);
 			productRefGroup = 86D5FF1E21616A4A007DC0DD /* Products */;
 			projectDirPath = "";
@@ -224,6 +224,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -257,6 +258,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -287,6 +289,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -313,6 +316,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -324,7 +328,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -343,7 +347,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,20 +383,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		865EEAD42438AF3A00F4BEC3 /* XCRemoteSwiftPackageReference "RxLocalizer" */ = {
+		7F7EC35D25FA9E4800B1E2F7 /* XCRemoteSwiftPackageReference "RxLocalizer" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "file:///Users/vladislav/Developer/RxSwiftCommunity/RxLocalizer";
+			repositoryURL = "file:///Users/vladkhambir/Developer/RxLocalizer";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		865EEAD52438AF3A00F4BEC3 /* RxLocalizer */ = {
+		7F7EC35E25FA9E4800B1E2F7 /* RxLocalizer */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 865EEAD42438AF3A00F4BEC3 /* XCRemoteSwiftPackageReference "RxLocalizer" */;
+			package = 7F7EC35D25FA9E4800B1E2F7 /* XCRemoteSwiftPackageReference "RxLocalizer" */;
 			productName = RxLocalizer;
 		};
 /* End XCSwiftPackageProductDependency section */

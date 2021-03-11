@@ -1,5 +1,10 @@
 # Change Log
 
+### 1.6.0
+
+Updated to Swift 5.3,  Xcode 12.4,  `RxSwift` &  `RxCocoa`  to 6.1.0
+
+
 ### 1.5.0
 
 Updated to Swift 5.2,  Xcode 11.4,  `RxSwift` & `RxCocoa` to 5.1.1
