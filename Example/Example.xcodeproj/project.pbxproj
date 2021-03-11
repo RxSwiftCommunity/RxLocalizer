@@ -388,7 +388,7 @@
 			repositoryURL = "file:///Users/vladkhambir/Developer/RxLocalizer";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.0;
+				minimumVersion = 1.6.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

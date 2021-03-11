@@ -6,8 +6,8 @@
         "repositoryURL": "/Users/vladkhambir/Developer/RxLocalizer",
         "state": {
           "branch": null,
-          "revision": "8af586cfd4425598920f04a5b48e27627e8da398",
-          "version": "1.5.0"
+          "revision": "bd40d553e04e4dd751d579ba6144921ef9e12901",
+          "version": "1.6.0"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
         "state": {
           "branch": null,
-          "revision": "254617dd7fae0c45319ba5fbea435bf4d0e15b5d",
-          "version": "5.1.2"
+          "revision": "7e01c05f25c025143073eaa3be3532f9375c614b",
+          "version": "6.1.0"
         }
       }
     ]
