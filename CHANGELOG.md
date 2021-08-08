@@ -1,5 +1,9 @@
 # Change Log
 
+### 1.7.0
+
+Updated to Xcode 13,  `RxSwift` &  `RxCocoa`  to 6.2.0
+
 ### 1.6.0
 
 Updated to Swift 5.3,  Xcode 12.4,  `RxSwift` &  `RxCocoa`  to 6.1.0
