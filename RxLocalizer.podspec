@@ -10,8 +10,8 @@ s.license = { :type => "MIT", :file => "LICENSE" }
 s.author = { "Vladislav Khambir" => "vlad.khambir@gmail.com" }
 s.homepage = "https://github.com/RxSwiftCommunity/RxLocalizer"
 s.source = { :git => "https://github.com/RxSwiftCommunity/RxLocalizer.git", :tag => "#{s.version}" }
-s.dependency 'RxSwift', '~> 6.2.0'
-s.dependency 'RxCocoa', '~> 6.2.0'
+s.dependency 'RxSwift', '~> 6.0'
+s.dependency 'RxCocoa', '~> 6.0'
 s.source_files = 'Source/*.swift'
 s.swift_version = "5.3.3"
 
